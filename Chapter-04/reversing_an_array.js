@@ -21,3 +21,23 @@ function reverseArray2(array) {
   return newArray;
 }
 console.log(reverseArray2(['A', 'B', 'C'])); // ['C', 'B', 'A']
+
+// reverse an array in place by reversing its elements
+function reverseArrayInPlace(array) {
+  let half = Math.floor(array.length / 2);
+  for (let i = 0; i < half; i++) {
+    let front = array[i];
+    let back = array[array.length - 1 - i];
+    array[i] = back;
+    array[array.length - 1 - i] = front;
+  }
+  return array;
+}
+
+let arrayValue1 = [1, 2, 3, 4, 5];
+reverseArrayInPlace(arrayValue1);
+console.log(arrayValue1); // [5, 4, 3, 2, 1]
+
+let arrayValue2 = ['A', 'B', 'C', 'D', 'E', 'F'];
+reverseArrayInPlace(arrayValue2);
+console.log(arrayValue2); // ['F', 'E', 'D', 'C', 'B', 'A']
