@@ -62,7 +62,7 @@ class GroupIterator {
     }
   }
 }
-console.log(Group.from(['a', 'b', 'c']))
+
 for (let value of Group.from(['a', 'b', 'c'])) {
   console.log(value);
 }
